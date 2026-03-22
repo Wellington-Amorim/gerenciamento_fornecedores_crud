@@ -14,12 +14,12 @@ public class FornecedorService {
     @Autowired
     public FornecedorRepository fornecedorRepository;
 
-    public List<FornecedorModel> listar() {
-        return fornecedorRepository.findAll();
-    }
-
     public FornecedorModel criar(FornecedorModel fornecedorModel) {
         return fornecedorRepository.save(fornecedorModel);
+    }
+
+    public List<FornecedorModel> listar() {
+        return fornecedorRepository.findAll();
     }
 
     public Optional<FornecedorModel> buscarId(Long id) {
